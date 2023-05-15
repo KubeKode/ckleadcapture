@@ -2,11 +2,12 @@ const express= require("express");
 const Router= express.Router();
 const dbconnected= require("./dbs");
 
-
+// NOUSE
 Router.get("/",(req, res)=>{
     const data=[{name:"David Test",email:"john007@gmail.com",pincode:123456,pan:"ASDFJKL",query:"none"}];
     res.send(data);
 });
+// _____
 
 Router.get("/api/user",(req, res)=>{
     dbconnected.query("select * from leads", (err, rows, fields)=>{
